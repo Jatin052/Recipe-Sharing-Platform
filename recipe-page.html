@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const recipeCards = document.querySelectorAll(".recipe-card");
+            const vegButton = document.getElementById("vegButton");
+            const nonVegButton = document.getElementById("nonVegButton");
+
+            searchInput.addEventListener("input", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                recipeCards.forEach(function (card) {
+                    const recipeTitle = card.querySelector("h2").textContent.toLowerCase();
+
+                    if (recipeTitle.includes(searchTerm)) {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            });
+
+            vegButton.addEventListener("click", function () {
+                filterRecipes("Veg");
+            });
+
+            nonVegButton.addEventListener("click", function () {
+                filterRecipes("Non-Veg");
+            });
+
+            function filterRecipes(category) {
+                recipeCards.forEach(function (card) {
+                    const recipeCategory = card.classList.contains(category.toLowerCase());
+
+                    if (recipeCategory || category === "All") {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            }
+        });
+    </script>
+
+
+    <header>
+        <div id="head">
+            <img id="heading" src="pictures/noodle-bowl-asia-food_52422-141.jpg" alt="company logo">
+            <div id="links">
+                <nav>
+                    <ul id="flex">
+                        <li><a href="home.html" class="hover-links">Home</a></li>
+                        <li><a href="page.html" class="hover-links">Recipes</a></li>
+                        <li><a href="about.html" class="hover-links">About us</a></li>
+                        <li><a href="signin.html" class="hover-links">Sign in</a></li>
+                        <li><a href="#" class="hover-links">Sign up</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+    </header>
+
+    <input type="text" id="searchInput" placeholder="Search recipes...">
+    <div id="recipeFilters">
+        <button id="vegButton" class="filter-button">Veg</button>
+        <button id="nonVegButton" class="filter-button">Non-Veg</button>
+    </div>
+
+    <div id="flex2">
+        <div id="recipes">
+            <div class="recipe-card veg" id="card1">
+                <img id="pizza"
+                    src="pictures/flying-slice-pizza-cartoon-vector-illustration-fast-food-concept-isolated-vector-flat-cartoon-style_.jpg"
+                    alt="Pizza">
+                <h2>Veg. Pizza Recipe</h2>
+                <ol>
+                    <li>Prepare the pizza dough</li>
+                    <li>Preheat your oven to 475°F (245°C) or as hot as it can go.</li>
+                    <li>Make the pizza sauce:</li>
+                    <li>Roll out the pizza dough</li>
+                    <li>Assemble the pizza</li>
+                    <li>Bake the pizza</li>
+                    <li>Remove the pizza from the oven, let it cool for a minute, then slice and enjoy!</li>
+                </ol>
+            </div>
+            <div class="recipe-card veg" id="card2">
+                <img id="manchurian" src="pictures/images1.jpg" alt="Manchurian">
+                <h2> Veg. Manchurian Recipe</h2>
+
+                <ol>
+                    <li>Prepare the Manchurian Balls</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat. Once the oil is hot, fry the
+                        Manchurian balls until they turn golden brown.</li>
+                    <li>Prepare the Manchurian Sauce</li>
+                    <li>Add soy sauce, tomato ketchup, and chili sauce to the pan. Stir well to combine</li>
+                    <li>Pour in the water and bring the mixture to a simmer.</li>
+                    <li>Add the cornstarch slurry while stirring continuously to thicken the sauce. Season with
+                        salt and pepper to taste.</li>
+                    <li>Once the sauce reaches the desired consistency, add the fried Manchurian balls to the
+                        pan. Gently coat the balls with the sauce.</li>
+                    <li>Garnish with chopped green onions and serve hot</li>
+                </ol>
+            </div>
+
+            <div class="recipe-card veg" id="card3">
+                <img id="noodles" src="pictures/noodles.jpg" alt="noodles">
+                <h2>Hakka Noodles</h2>
+                <ol>
+                    <li>Cook the Hakka noodles according to the package instructions, then drain and set aside.
+                    </li>
+                    <li>Heat vegetable oil in a large pan or wok over medium-high heat.</li>
+                    <li>Add sliced onions and stir-fry for a couple of minutes until they start to soften.</li>
+                    <li>Add the mixed vegetables and stir-fry for about 4-5 minutes until they are tender-crisp.
+                    </li>
+                    <li>Add the cooked noodles, soy sauce, and chili sauce to the pan. Season with salt and
+                        pepper</li>
+                    <li>Toss everything together and stir-fry for another 2-3 minutes.</li>
+                    <li>Taste and adjust the seasoning if necessary.</li>
+                    <li>Serve your quick and tasty Hakka noodles hot</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="flex3">
+        <div class="recipe-card non-veg" id="card4">
+            <img id="biryani" src="pictures/biryani.jpg" alt="Biriyani">
+            <h2>Non-Veg. Biryani</h2>
+            <ol>
+                <li>Cook the rice until 70% done, then drain and set aside.</li>
+                <li>In a pot, sauté spices and onions until golden brown</li>
+                <li>Add chicken, tomatoes, and spices. Cook until chicken changes color and tomatoes soften.
+                </li>
+                <li>Stir in yogurt and cook until the mixture thickens</li>
+                <li>Layer partially cooked rice with chicken mixture, mint, and coriander leaves.</li>
+                <li>Cover and cook on low heat for 20-25 minutes</li>
+                <li>Fluff the biryani and serve hot with your choice of sides.</li>
+            </ol>
+        </div>
+
+        <div class="recipe-card non-veg" id="card5">
+            <img id="tandoori" src="pictures/tandoori.jpg" alt="Tandoori Chicken">
+            <h2>Tandoori Chicken</h2>
+            <ol>
+                <li>Make deep slits in the chicken.</li>
+                <li>Mix yogurt, tandoori spice, lemon juice, oil, ginger-garlic paste, paprika, and salt to
+                    create a marinade.</li>
+                <li>Coat the chicken with the marinade and refrigerate for 2 hours or overnight.</li>
+                <li>Grill or bake at 450-500°F (230-260°C) for 15-20 minutes until fully cooked and charred.
+                </li>
+                <li>Garnish with lemon and coriander.</li>
+                <li>Serve with naan, rice, or your preferred sides.</li>
+            </ol>
+
+        </div>
+
+        <div class="recipe-card non-veg" id="card6">
+            <img id="chilli" src="pictures/pngtree-food-fried-chicken-chili-pattern-png-image_9120843.jpg"
+                alt="Chilli Chicken">
+            <h2>Chilli Chicken</h2>
+            <ol>
+                <li>Marinate chicken with egg, cornstarch, soy sauce, salt, and black pepper. Rest for 20-30
+                    minutes.</li>
+                <li>Stir-fry marinated chicken until golden and cooked. Set aside.</li>
+                <li>Sauté garlic, ginger, and green chilies. Add onions and bell peppers, stir-fry until they
+                    soften.</li>
+                <li>Return chicken to the pan, mix with vegetables.</li>
+                <li>Pour a sauce mixture of soy sauce, chili sauce, vinegar, sugar, and salt over chicken. Stir
+                    to coat.</li>
+                <li>Add water, simmer until sauce thickens and coats the chicken.</li>
+                <li>Garnish with chopped spring onions.</li>
+                <li>Serve with rice or as an appetizer. Enjoy your chili chicken!</li>
+            </ol>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
