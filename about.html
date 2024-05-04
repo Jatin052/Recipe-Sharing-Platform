@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    section {
+        max-width: 1360px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+        transition: transform 0.5s ease;
+
+    }
+
+    section:hover {
+        transform: scale(1.05);
+    }
+
+
+    h2 {
+        color: #333;
+        font-size: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+    }
+
+    footer {
+        background-color: #ffffff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .team-members-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    .team-member-card {
+        width: 16%;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        margin: 0 30px;
+    }
+
+    .team-member-card:hover {
+        transform: scale(1.06);
+        background-color: #828282;
+    }
+
+    .team-member-info {
+        padding: 20px;
+    }
+
+    .team-member-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+</style>
+
+<body>
+    <header>
+        <div id="head">
+            <img id="heading" src="pictures/noodle-bowl-asia-food_52422-141.jpg" alt="company logo">
+            <div id="links">
+                <nav>
+                    <ul id="flex">
+                        <li><a href="home.html" class="hover-links">Home</a></li>
+                        <li><a href="page.html" class="hover-links">Recipes</a></li>
+                        <li><a href="about.html" class="hover-links">About us</a></li>
+                        <li><a href="signin.html" class="hover-links">Sign in</a></li>
+                        <li><a href="signup.html" class="hover-links">Sign up</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <br>
+        <p>Welcome to Recipe Sharing Platform, where food enthusiasts come together to share their favorite recipes,
+            cooking tips, and culinary experiences. Our platform is dedicated to fostering a community of passionate
+            cooks who love to explore the world of flavors and share their creations with others.</p>
+
+        <p>At Recipe Sharing Platform, we believe that cooking is not just a necessity but a creative and enjoyable
+            activity. Whether you're a seasoned chef or a beginner in the kitchen, our platform provides a space for
+            everyone to discover, create, and connect with like-minded individuals who share a love for good food.</p>
+
+        <p>Explore a wide range of recipes, from quick and easy meals to gourmet delights. Connect with fellow foodies,
+            exchange cooking tips, and build a collection of your favorite recipes. Join our vibrant community and let
+            the culinary journey begin!</p>
+    </section>
+    <div class="team-members-container">
+        <div class="team-member-card">
+            <img src="pictures/jsn.jpg" alt="Team Member 1" class="team-member-image">
+            <div class="team-member-info">
+                <h3>Jashan Singh</h3>
+                <p>Email: jashan0698.be23@chitkara.edu.in</p>
+                <p>Roll No. - 2310990698</p>
+                <p>Follow me on: <a href="#" target="_blank">Instagram</a></p>
+            </div>
+        </div>
+
+        <div class="team-member-card">
+            <img src="pictures/jat.jpg" alt="Jatin" class="team-member-image">
+            <div class="team-member-info">
+                <h3>Jatin</h3>
+                <p>Email: jatin0700.be23@chitkara.edu.in</p>
+                <p>Roll No. - 2310990700</p>
+                <p>Follow me on: <a href="#" target="_blank">Instagram</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
