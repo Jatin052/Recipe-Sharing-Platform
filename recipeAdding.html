@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reciperadding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="recipeadding.js"></script>
+    
+    <header>
+        <div id="head">
+            <img id="heading" src="pictures/noodle-bowl-asia-food_52422-141.jpg" alt="company logo">
+            <div id="links">
+                <nav>
+                    <ul id="flex">
+                        <li><a href="home.html" class="hover-links">Home</a></li>
+                        <li><a href="page.html" class="hover-links">Recipes</a></li>
+                        <li><a href="about.html" class="hover-links">About us</a></li>
+                        <li><a href="signin.html" class="hover-links">Sign in</a></li>
+                        <li><a href="signup.html" class="hover-links">Sign up</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="container">
+        <div class="maindiv">
+            
+            <div class="recipe">
+                <h1>Recipe Sharing</h1>
+                <input id="recipeName" type="text" class="recipe-name" placeholder="Recipe Name">
+                <input id="ingredients" type="text" class="recipe-name"placeholder='Ingredients'>
+                <input id="instructions" type="text" class="recipe-name inline" placeholder="Instructions">
+                <input id="imageUrl" type="text" class="recipe-name inline" placeholder="Image URL">
+                <input id="procedure" type="text" class="recipe-name" placeholder="Procedure"></textarea>
+            </div>
+            <div class="button">
+                <button onclick="addRecipe()">
+                    Add recipe
+                </button>
+
+            </div>
+        </div>
+
+        <div class="result" id="recipeContainer">
+
+        </div>
+        </div>
+        <div class="result">
+
+        </div>
+    </div>
+    
+</body>
+
+</html>
