@@ -7,6 +7,89 @@
     </head>
     <center>
     <style>
+/* CSS styles for additional elements */
+
+/* Remember Me checkbox */
+label input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+}
+
+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5e6681;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+label::after {
+    content: '\2713';
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    font-size: 14px;
+    color: #fff;
+    visibility: hidden;
+}
+
+label:hover::before {
+    border-color: #64ac12;
+}
+
+input[type="checkbox"]:checked + label::after {
+    visibility: visible;
+}
+
+/* Social media login buttons */
+.btn-social {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: #3b5998; /* Facebook blue */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-social:hover {
+    background-color: #4267B2; /* Darker Facebook blue */
+}
+
+/* Sign Up link */
+p a {
+    color: #64ac12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #5e6681;
+}
+
+/* Error messages */
+.error-messages {
+    color: #ff4d4d; /* Red */
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
     body{
         background-image: url("https://wallpapercave.com/wp/wp9764009.jpg");
         background-repeat:no-repeat;
@@ -128,6 +211,8 @@
               </div>
               <button class="btn" type="submit">Login</button>
               <a href="#" class="btn-link">Forgot your password?</a>
+<label><input type="checkbox" name="remember"> Remember Me</label>
+
             </form>
           </div>
         </center>
