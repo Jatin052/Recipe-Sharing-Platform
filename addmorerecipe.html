@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addrecipe.css">
+    <title>Recipe Sharing Platform</title>
+</head>
+
+<body>
+    <div id="recipe-form">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" required>
+
+        <label for="recipeIngredients">Ingredients:</label>
+        <textarea id="recipeIngredients" required></textarea>
+
+        <label for="recipeInstructions">Instructions:</label>
+        <textarea id="recipeInstructions" required></textarea>
+
+        <label for="recipeImageURL">Image URL:</label>
+        <input type="text" id="recipeImageURL">
+
+        <button onclick="addRecipe()">Add Recipe</button>
+    </div>
+
+    <div id="recipe-container"></div>
+
+    <script>
+        function addRecipe() {
+            // Get values from form
+            var recipeName = document.getElementById("recipeName").value;
+            var recipeIngredients = document.getElementById("recipeIngredients").value;
+            var recipeInstructions = document.getElementById("recipeInstructions").value;
+            var recipeImageURL = document.getElementById("recipeImageURL").value;
+
+            // Create a new div for the recipe
+            var recipeDiv = document.createElement("div");
+            recipeDiv.classList.add("recipe");
+
+            // Populate the div with recipe details
+            recipeDiv.innerHTML = `
+        <h2>${recipeName}</h2>
+        <p><strong>Ingredients:</strong> ${recipeIngredients}</p>
+        <p><strong>Instructions:</strong> ${recipeInstructions}</p>
+        <img src="${recipeImageURL}" alt="Recipe Image">
+    `;
+
+            // Add the recipe div to the container
+            var recipeContainer = document.getElementById("recipe-container");
+            recipeContainer.appendChild(recipeDiv);
+
+            // Clear the form fields
+            document.getElementById("recipeName").value = "";
+            document.getElementById("recipeIngredients").value = "";
+            document.getElementById("recipeInstructions").value = "";
+            document.getElementById("recipeImageURL").value = "";
+        }
+
+    </script>
+</body>
+
+</html>
