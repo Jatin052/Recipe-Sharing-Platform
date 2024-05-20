@@ -5,11 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css files/recipeAdding.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="/css files/recipeAdding.css">
+<style>
+    * {
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    *::selection {
+        background: black;
+        color: white;
+    }
+    
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background: rgb(222, 225, 232); */
+    }
+    
+    .maindiv {
+        height: 90vh;
+        background: pink;
+        flex: 1.2;
+        /* height: 80vh; */
+        border-radius: 22px;
+        background: #e0e0e0;
+        box-shadow: 27px 27px 54px #bebebe,
+            -27px -27px 54px #ffffff;
+        margin-left: 12px;
+    }
+    
+    .result {
+        flex: 0.8;
+        height: 50vh;
+    }
+    
+    .recipe {
+        padding: 25px;
+    }
+    
+    .recipe-name {
+        height: 64px;
+        width: 90%;
+        display: block;
+        margin: 30px 40px;
+        /* border-radius: 40px; */
+        border-radius: 46px;
+        background: #e0e0e0;
+        box-shadow: inset 13px 13px 26px #cccccc,
+            inset -13px -13px 26px #f4f4f4;
+        padding: 30px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .recipe-name:focus {
+        outline: none;
+        border: 2px solid black;
+    }
+    
+    .inline {
+        display: inline-block ;
+        width: 340px ;
+    }
+    
+    .button {
+        position: relative;
+        left: 376px;
+        top: -30px;
+    }
+    
+    #head {
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Edu TAS Beginner', cursive;
+    }
+    
+    .hover-links {
+    
+        margin-right: 100px;
+        font-size: 1.1rem;
+    
+        color: black;
+        transition: 0.5s ease-in-out;
+    
+    
+    }
+    
+    #flex {
+        display: flex;
+        height: 100%;
+    }
+    
+    a {
+        text-decoration: none;
+    
+    }
+    
+    #head {
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Edu TAS Beginner', cursive;
+    }
+    
+    .hover-links:hover {
+        color: rgb(6, 138, 138);
+    }
+    
+    #intro {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #heading {
+        width: 85px;
+        margin-left: 80px;
+    }
+    
+    .button button {
+        padding: 20px 30px;
+        background: rgb(222, 225, 232);
+        /* background: rgb(6,158,158); */
+        border-radius: 46px;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgb(92, 91, 91);
+        /* background: #e0e0e0; */
+        box-shadow: 27px 27px 54px #bebebe,
+            -27px -27px 54px #ffffff;
+        transition: 0.5s;
+    }
+    
+    
+    .button button:hover {
+        background-color: black;
+        color: white;
+    }
+    
+    h1 {
+        text-align: center;
+        color: rgb(74, 72, 72);
+    }
+    
+    
+    
+    .recipe-card {
+        background-color: rgb(174, 174, 174);
+        border-radius: 14px;
+        padding: 10px;
+        margin: 18px 16px 18px 33px;
+    
+    }
+    
+    .recipe-card img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
 <body>
     <script src="/js files/recipeAdding.js"></script>
     
